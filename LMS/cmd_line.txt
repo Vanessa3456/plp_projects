@@ -34,4 +34,33 @@ git checkout new_feature
 5.Merging
 git merge new_feature
 6.git checkout -b new_branch-allows us to create a new branch and switch to it at the same time
+7.Creating a new branch for the new branch created
+git checkout new_feature/amazing_feature
 
+8.Rebase vs merge
+Merge- creates a merge commit to combine branches
+eg git checkout main and git merge new_feature
+Rebase- reqrites commit history into a linear form(great for local branches, avoid on shared branches)
+eg git checkout new_feature $$ git rebase main
+9.Interactive Rebase
+10.Cherry-pick
+You pick only the commit that you want by their commiit hash
+git log otherBranch --oneline
+git cherry-pick (commithash)= this applyies changes introduced by that commit into the branch
+Cherry pick can also do multiple commit
+git cherry-pick 345678d 753224e
+11.Git tags and releases
+Perfect for making versions
+git tag- a v1.0 -m "Version 1.0 release"
+or
+git tag v1.0
+12.Ammending commits
+-fix your last commit
+git commit --ammend(to modify/add to your latest commit)
+-only ammend local commits but not shared ones
+13.Conflict resolution in Rebase and merge
+a.Conflict markers in files
+How to solve merge conflits that come up with cherry-pick
+a.1.git cherry-pick abort- stops the cherry picking
+You can just edit it manually with Sublime or Vim 
+a.2.git stash- for changes that were local
