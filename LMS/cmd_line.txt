@@ -1,0 +1,37 @@
+WINDOWS
+1.Create file
+-use echo = echo "This is a Word Doc" >my_doc.docx
+2.Rename file
+use ren
+ren my_doc.docx new_doc.docx
+3.Copying file
+use copy
+copy new_doc.docx backup_doc.docx
+4.Moving file
+mov backup_doc.docx C:\Documents\Moved_Document.docx
+
+LINUX
+1.Touch = touch my_doc.docx
+2.mv(Rename)= mv my_doc.docx doc.docx
+3.cp(copy)= cp new_doc.docs backup.docx
+4.mv(moving) mv doc.docx ~/Documents/Moved_Document.docx
+
+MAC
+1.touch(create file)
+2.mv(rename)
+3.cp(copy)
+4.mv(cutting/moving)
+
+GIT
+1.Configuration
+git config --global user.name "Your Name" git config --global user.email "you@example.com"
+2.Encryption
+ssh-keygen -t rsa -b 4096 -C "you@example.com"
+3.Creating a branch
+git branch new_feature
+4.Switching branches
+git checkout new_feature
+5.Merging
+git merge new_feature
+6.git checkout -b new_branch-allows us to create a new branch and switch to it at the same time
+
